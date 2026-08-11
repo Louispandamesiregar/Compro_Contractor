@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Gudang Logistik Utama",
+    "category": "Konstruksi Baja",
+    "description": "Pembangunan struktur baja untuk gudang logistik skala besar.",
+    "imageUrl": "/images/portfolio/1.webp",
+    "year": 2023
+  },
+  {
+    "id": "2",
+    "title": "Pusat Perbelanjaan Sentosa",
+    "category": "Bangunan Komersial",
+    "description": "Pembangunan mall modern dengan fasilitas lengkap.",
+    "imageUrl": "/images/portfolio/2.webp",
+    "year": 2022
+  },
+  {
+    "id": "3",
+    "title": "Renovasi Gedung Perkantoran",
+    "category": "Renovasi Eksterior",
+    "description": "Pembaruan total fasad gedung perkantoran 10 lantai.",
+    "imageUrl": "/images/portfolio/3.webp",
+    "year": 2023
+  },
+  {
+    "id": "4",
+    "title": "Pabrik Manufaktur Baja",
+    "category": "Konstruksi Baja",
+    "description": "Pembangunan fasilitas produksi manufaktur baja modern.",
+    "imageUrl": "/images/portfolio/4.webp",
+    "year": 2024
+  },
+  {
+    "id": "5",
+    "title": "Kompleks Ruko Eksklusif",
+    "category": "Bangunan Komersial",
+    "description": "Pembangunan kompleks ruko 3 lantai di pusat kota.",
+    "imageUrl": "/images/portfolio/5.webp",
+    "year": 2024
+  }
+]

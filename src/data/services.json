@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Konstruksi Baja",
+    "description": "Layanan konstruksi baja berkualitas tinggi untuk kebutuhan industri dan komersial.",
+    "iconName": "Building2"
+  },
+  {
+    "id": "2",
+    "title": "Bangunan Komersial",
+    "description": "Pembangunan ruko, kantor, dan fasilitas komersial dengan desain modern.",
+    "iconName": "Briefcase"
+  },
+  {
+    "id": "3",
+    "title": "Renovasi Eksterior",
+    "description": "Pembaruan fasad dan eksterior bangunan untuk tampilan yang lebih profesional.",
+    "iconName": "Hammer"
+  }
+]

@@ -32,7 +32,7 @@ export default function Portfolio() {
               </div>
               
               {/* Sharp Diagonal Overlay */}
-              <div className="absolute inset-0 bg-primary/95 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-8" style={{ clipPath: "polygon(0 20%, 100% 0, 100% 100%, 0% 100%)" }}>
+              <div className="absolute inset-0 bg-primary/95 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end px-8 pb-8 pt-16" style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}>
                 <span className="text-secondary font-black text-xs mb-3 uppercase tracking-widest border-b border-secondary/30 pb-2 inline-block">
                   {project.category}
                 </span>

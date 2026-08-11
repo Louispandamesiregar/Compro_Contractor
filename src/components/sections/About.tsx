@@ -24,7 +24,7 @@ export default function About() {
               <img 
                 src="/images/portfolio/2.webp" 
                 alt="Tentang PT Louis Pandame Siregar" 
-                className="relative z-10 object-cover h-[450px] w-full grayscale hover:grayscale-0 transition-all duration-700"
+                className="relative z-10 object-cover h-[450px] w-full transition-all duration-700"
               />
               
               {/* Stat Box */}

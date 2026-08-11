@@ -27,7 +27,7 @@ export default function Portfolio() {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition-all duration-700 mix-blend-luminosity group-hover:mix-blend-normal"
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition-all duration-700"
                 />
               </div>
               

@@ -11,7 +11,7 @@ export default function Hero() {
         <img
           src="/images/portfolio/1.webp"
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-40 grayscale"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
 

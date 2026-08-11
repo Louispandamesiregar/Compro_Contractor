@@ -27,14 +27,14 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-secondary/95 backdrop-blur-sm shadow-md py-3" : "bg-secondary py-5"
+        scrolled ? "bg-primary/95 backdrop-blur-sm shadow-md py-3" : "bg-primary py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-white font-bold text-xl tracking-wider">
-              PT. LOUIS PANDAME<span className="text-primary"> SIREGAR</span>
+            <Link href="/" className="text-secondary font-black text-xl tracking-wider">
+              PT. LOUIS PANDAME<span className="text-white"> SIREGAR</span>
             </Link>
           </div>
           
@@ -45,7 +45,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-secondary/80 hover:text-secondary hover:bg-black/5 transition-colors px-3 py-2 rounded-md text-sm font-bold tracking-wide"
                 >
                   {link.name}
                 </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-secondary hover:text-secondary/70 focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -67,14 +67,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-secondary border-t border-slate-600">
+        <div className="md:hidden bg-primary border-t border-black/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                className="text-secondary hover:bg-black/5 block px-3 py-2 rounded-md text-base font-bold"
               >
                 {link.name}
               </Link>

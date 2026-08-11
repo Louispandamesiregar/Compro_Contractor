@@ -6,13 +6,13 @@ import { Service } from "@/types";
 const getIcon = (iconName: string) => {
   switch (iconName) {
     case "Building2":
-      return <Building2 className="w-10 h-10 text-primary" />;
+      return <Building2 className="w-12 h-12 text-white" />;
     case "Briefcase":
-      return <Briefcase className="w-10 h-10 text-primary" />;
+      return <Briefcase className="w-12 h-12 text-white" />;
     case "Hammer":
-      return <Hammer className="w-10 h-10 text-primary" />;
+      return <Hammer className="w-12 h-12 text-white" />;
     default:
-      return <Shield className="w-10 h-10 text-primary" />;
+      return <Shield className="w-12 h-12 text-white" />;
   }
 };
 
@@ -20,41 +20,43 @@ export default function Services() {
   const services: Service[] = servicesData;
 
   return (
-    <section id="services" className="relative">
-      {/* Split Background (Top secondary, Bottom light gray) */}
-      <div className="absolute inset-0 z-0 flex flex-col">
-        <div className="h-[60%] bg-secondary"></div>
-        <div className="h-[40%] bg-gray-50"></div>
-      </div>
+    <section id="services" className="relative bg-white py-32 overflow-hidden">
+      {/* Abstract Diagonal Background */}
+      <div className="absolute inset-0 z-0 bg-secondary" style={{ clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0 85%)" }}></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16 pt-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Layanan Kami</h2>
-          <div className="w-20 h-1.5 bg-primary mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Kami menawarkan berbagai solusi konstruksi terpadu yang dirancang khusus untuk memenuhi standar industri dan spesifikasi unik proyek Anda.
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 pt-16">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">Layanan Konstruksi</h2>
+            <div className="w-32 h-2 bg-primary"></div>
+          </div>
+          <p className="text-gray-300 mt-6 md:mt-0 max-w-md border-l-2 border-primary pl-4 text-lg">
+            Solusi konstruksi terpadu yang dirancang khusus untuk memenuhi standar industri dan spesifikasi unik proyek Anda.
           </p>
         </div>
 
-        {/* Overlapping Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+        {/* Sharp Cards Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-8 border-white bg-white">
+          {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group flex flex-col"
+              className={`bg-white p-12 hover:bg-gray-50 transition-all duration-300 group border-b md:border-b-0 ${index !== services.length - 1 ? 'md:border-r' : ''} border-gray-200 relative overflow-hidden`}
             >
-              <div className="bg-gray-50 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-secondary transition-all shadow-sm">
-                <div className="group-hover:brightness-0 transition-all">
+              {/* Hover Abstract Accent */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary transform translate-x-12 -translate-y-12 rotate-45 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-500 z-0"></div>
+              
+              <div className="relative z-10">
+                <div className="bg-secondary w-20 h-20 flex items-center justify-center mb-10 group-hover:bg-primary transition-colors duration-300 shadow-lg">
                   {getIcon(service.iconName)}
                 </div>
+                <h3 className="text-2xl font-black text-secondary mb-4 uppercase tracking-wide">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
             </div>
           ))}
         </div>

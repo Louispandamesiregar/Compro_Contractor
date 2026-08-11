@@ -3,37 +3,44 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pb-40 pt-48 md:pt-64 md:pb-56 flex items-center justify-center bg-secondary">
+    <section id="hero" className="relative pb-48 pt-48 md:pt-64 md:pb-64 flex items-center justify-center bg-secondary" style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)" }}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/70 z-10" />
+        <div className="absolute inset-0 bg-secondary/80 z-10" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTU5IDU5TDEgMVY1OUg1OVoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')] z-20 mix-blend-overlay"></div>
         <img
           src="/images/portfolio/1.webp"
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-40 grayscale"
         />
       </div>
 
-      <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+      <div className="relative z-30 text-center px-4 max-w-6xl mx-auto">
+        <div className="inline-block bg-primary px-4 py-1 mb-8">
+          <span className="text-secondary font-bold tracking-widest text-sm uppercase">Kualitas & Presisi</span>
+        </div>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tighter leading-tight uppercase">
           Membangun Masa Depan <br className="hidden md:block"/>
-          <span className="text-primary">Dengan Kualitas</span>
+          <span className="text-primary">Struktur Kokoh</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed border-l-4 border-primary pl-4 text-left inline-block">
           PT. Louis Pandame Siregar hadir sebagai mitra kontraktor profesional untuk mewujudkan proyek konstruksi impian Anda dengan standar tertinggi.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <Link
             href="#portfolio"
-            className="px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-yellow-400 transition-all flex items-center shadow-xl shadow-primary/20 hover:-translate-y-1"
+            className="px-8 py-4 bg-primary text-secondary font-black hover:bg-yellow-400 transition-all flex items-center group relative overflow-hidden"
           >
-            Lihat Portofolio <ArrowRight className="ml-2 h-5 w-5" />
+            <span className="relative z-10 flex items-center">
+              Lihat Portofolio <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+            <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
           </Link>
           <Link
             href="#contact"
-            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-lg hover:bg-white/10 hover:border-white transition-all hover:-translate-y-1"
+            className="px-8 py-4 bg-transparent border-2 border-white text-white font-black hover:bg-white hover:text-secondary transition-all relative overflow-hidden group"
           >
-            Hubungi Kami
+            <span className="relative z-10">Hubungi Kami</span>
           </Link>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Target, Lightbulb, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -21,9 +22,11 @@ export default function About() {
               <div className="absolute -inset-4 bg-gray-100 transform skew-y-3 z-0"></div>
               <div className="absolute -inset-4 bg-primary transform -skew-y-3 z-0 translate-x-4 translate-y-4 opacity-20"></div>
               
-              <img 
+              <Image 
                 src="/images/portfolio/2.webp" 
                 alt="Tentang PT Louis Pandame Siregar" 
+                width={800}
+                height={600}
                 className="relative z-10 object-cover h-[450px] w-full transition-all duration-700"
               />
               

@@ -1,6 +1,7 @@
 import portfolioData from "@/data/portfolio.json";
 import { Project } from "@/types";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Portfolio() {
   const projects: Project[] = portfolioData;
@@ -24,9 +25,11 @@ export default function Portfolio() {
               className="group relative overflow-hidden bg-white shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
+                  width={600}
+                  height={450}
                   className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition-all duration-700"
                 />
               </div>

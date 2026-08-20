@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -8,10 +9,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-secondary/80 z-10" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTU5IDU5TDEgMVY1OUg1OVoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')] z-20 mix-blend-overlay"></div>
-        <img
+        <Image
           src="/images/portfolio/1.webp"
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-40"
+          fill
+          className="object-cover opacity-40"
         />
       </div>
 

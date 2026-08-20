@@ -1,10 +1,18 @@
+"use client";
 import { Target, Lightbulb, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section id="about" className="relative z-30 pb-24 px-4 sm:px-6 lg:px-8 -mt-24">
-      <div className="max-w-7xl mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto"
+      >
         {/* Floating Geometric Card */}
         <div className="bg-white p-8 md:p-12 lg:p-16 border-t-8 border-primary shadow-2xl relative">
           
@@ -81,7 +89,7 @@ export default function About() {
           </div>
           
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

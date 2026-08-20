@@ -1,4 +1,6 @@
+"use client";
 import portfolioData from "@/data/portfolio.json";
+import { motion } from "framer-motion";
 import { Project } from "@/types";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -10,17 +12,27 @@ export default function Portfolio() {
     <section id="portfolio" className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-20 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 text-center"
+        >
           <div className="inline-block bg-primary px-4 py-1 mb-6">
             <span className="text-secondary font-bold tracking-widest text-sm uppercase">Karya Kami</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-secondary mb-6 uppercase tracking-tight">Galeri Proyek</h2>
           <div className="w-24 h-2 bg-secondary mx-auto"></div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div 
+          {projects.map((project, index) => (
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               key={project.id}
               className="group relative overflow-hidden bg-white shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
@@ -35,7 +47,7 @@ export default function Portfolio() {
               </div>
               
               {/* Sharp Diagonal Overlay */}
-              <div className="absolute inset-0 bg-primary/95 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end px-8 pb-8 pt-16" style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}>
+              <div className="absolute inset-0 bg-primary/95 transform translate-y-[65%] active:translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end px-8 pb-8 pt-16" style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}>
                 <span className="text-secondary font-black text-xs mb-3 uppercase tracking-widest border-b border-secondary/30 pb-2 inline-block">
                   {project.category}
                 </span>
@@ -50,7 +62,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

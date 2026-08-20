@@ -1,4 +1,6 @@
+"use client";
 import { MessageSquare, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const waNumber = "6285779991402";
@@ -12,7 +14,13 @@ export default function Contact() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5" style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)" }}></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white shadow-2xl border-l-8 border-primary">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          className="bg-white shadow-2xl border-l-8 border-primary"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             
             {/* Contact Information */}
@@ -60,7 +68,7 @@ export default function Contact() {
 
             {/* Action Cards */}
             <div className="p-12 lg:p-20 bg-gray-50 flex flex-col justify-center space-y-6 relative overflow-hidden">
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
               
               <h3 className="text-2xl font-black text-secondary mb-8 uppercase tracking-wide">Hubungi Langsung</h3>
               
@@ -68,7 +76,7 @@ export default function Contact() {
                 href={waUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center p-6 bg-white border-2 border-secondary/10 hover:border-secondary hover:shadow-xl transition-all group relative overflow-hidden"
+                className="flex items-center p-6 bg-white border-2 border-secondary/10 hover:border-secondary hover:shadow-xl active:scale-[0.98] transition-all group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-green-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
                 <div className="relative z-10 flex items-center w-full">
@@ -85,7 +93,7 @@ export default function Contact() {
 
               <a 
                 href={emailUrl}
-                className="flex items-center p-6 bg-white border-2 border-secondary/10 hover:border-secondary hover:shadow-xl transition-all group relative overflow-hidden"
+                className="flex items-center p-6 bg-white border-2 border-secondary/10 hover:border-secondary hover:shadow-xl active:scale-[0.98] transition-all group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
                 <div className="relative z-10 flex items-center w-full">
@@ -102,7 +110,7 @@ export default function Contact() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

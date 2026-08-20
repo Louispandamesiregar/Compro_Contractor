@@ -1,4 +1,6 @@
+"use client";
 import servicesData from "@/data/services.json";
+import { motion } from "framer-motion";
 import { Building2, Briefcase, Hammer, Shield } from "lucide-react";
 import { Service } from "@/types";
 
@@ -24,7 +26,13 @@ export default function Services() {
       {/* Abstract Diagonal Background */}
       <div className="absolute inset-0 z-0 bg-secondary" style={{ clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0 85%)" }}></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 pt-16">
           <div className="max-w-2xl">
@@ -47,9 +55,13 @@ export default function Services() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary transform translate-x-12 -translate-y-12 rotate-45 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-500 z-0"></div>
               
               <div className="relative z-10">
-                <div className="bg-secondary w-20 h-20 flex items-center justify-center mb-10 group-hover:bg-primary transition-colors duration-300 shadow-lg">
+                <motion.div 
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: index * 0.2 }}
+                  className="bg-secondary w-20 h-20 flex items-center justify-center mb-10 group-hover:bg-primary transition-colors duration-300 shadow-lg"
+                >
                   {getIcon(service.iconName)}
-                </div>
+                </motion.div>
                 <h3 className="text-2xl font-black text-secondary mb-4 uppercase tracking-wide">
                   {service.title}
                 </h3>
@@ -60,7 +72,7 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

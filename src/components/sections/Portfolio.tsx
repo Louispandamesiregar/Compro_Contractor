@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import portfolioData from "@/data/portfolio.json";
 import { motion } from "framer-motion";
 import { Project } from "@/types";
@@ -7,6 +8,7 @@ import Image from "next/image";
 
 export default function Portfolio() {
   const projects: Project[] = portfolioData;
+  const [activeCard, setActiveCard] = useState<string | null>(null);
 
   return (
     <section id="portfolio" className="py-32 bg-gray-50">
@@ -34,6 +36,7 @@ export default function Portfolio() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={project.id}
+              onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
               className="group relative overflow-hidden bg-white shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary">
@@ -47,7 +50,10 @@ export default function Portfolio() {
               </div>
               
               {/* Sharp Diagonal Overlay */}
-              <div className="absolute inset-0 bg-primary/95 transform translate-y-[65%] active:translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end px-8 pb-8 pt-16" style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}>
+              <div 
+                className={`absolute inset-0 bg-primary/95 transform transition-transform duration-500 ease-in-out flex flex-col justify-end px-8 pb-8 pt-16 ${activeCard === project.id ? "translate-y-0" : "translate-y-[65%] md:translate-y-full md:group-hover:translate-y-0"}`} 
+                style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}
+              >
                 <span className="text-secondary font-black text-xs mb-3 uppercase tracking-widest border-b border-secondary/30 pb-2 inline-block">
                   {project.category}
                 </span>

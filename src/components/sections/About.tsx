@@ -23,7 +23,7 @@ export default function About() {
               <div className="absolute -inset-4 bg-primary transform -skew-y-3 z-0 translate-x-4 translate-y-4 opacity-20"></div>
               
               <Image 
-                src="/images/portfolio/2.webp" 
+                src="/Compro_Contractor/images/portfolio/2.webp" 
                 alt="Tentang PT Louis Pandame Siregar" 
                 width={800}
                 height={600}

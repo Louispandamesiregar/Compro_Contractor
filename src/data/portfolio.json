@@ -4,7 +4,7 @@
     "title": "Gudang Logistik Utama",
     "category": "Konstruksi Baja",
     "description": "Pembangunan struktur baja untuk gudang logistik skala besar.",
-    "imageUrl": "/images/portfolio/1.webp",
+    "imageUrl": "/Compro_Contractor/images/portfolio/1.webp",
     "year": 2023
   },
   {
@@ -12,7 +12,7 @@
     "title": "Pusat Perbelanjaan Sentosa",
     "category": "Bangunan Komersial",
     "description": "Pembangunan mall modern dengan fasilitas lengkap.",
-    "imageUrl": "/images/portfolio/2.webp",
+    "imageUrl": "/Compro_Contractor/images/portfolio/2.webp",
     "year": 2022
   },
   {
@@ -20,7 +20,7 @@
     "title": "Renovasi Gedung Perkantoran",
     "category": "Renovasi Eksterior",
     "description": "Pembaruan total fasad gedung perkantoran 10 lantai.",
-    "imageUrl": "/images/portfolio/3.webp",
+    "imageUrl": "/Compro_Contractor/images/portfolio/3.webp",
     "year": 2023
   },
   {
@@ -28,7 +28,7 @@
     "title": "Pabrik Manufaktur Baja",
     "category": "Konstruksi Baja",
     "description": "Pembangunan fasilitas produksi manufaktur baja modern.",
-    "imageUrl": "/images/portfolio/4.webp",
+    "imageUrl": "/Compro_Contractor/images/portfolio/4.webp",
     "year": 2024
   },
   {
@@ -36,7 +36,7 @@
     "title": "Kompleks Ruko Eksklusif",
     "category": "Bangunan Komersial",
     "description": "Pembangunan kompleks ruko 3 lantai di pusat kota.",
-    "imageUrl": "/images/portfolio/5.webp",
+    "imageUrl": "/Compro_Contractor/images/portfolio/5.webp",
     "year": 2024
   }
 ]

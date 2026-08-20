@@ -32,7 +32,7 @@ export default function About() {
               
               <Image 
                 src="/Compro_Contractor/images/portfolio/2.webp" 
-                alt="Tentang PT Louis Pandame Siregar" 
+                alt="Tentang PT Ardumega Kontraktor"
                 width={800}
                 height={600}
                 className="relative z-10 object-cover h-[450px] w-full transition-all duration-700"
@@ -48,7 +48,7 @@ export default function About() {
             <div className="z-10 lg:pl-8">
               <h3 className="text-3xl font-black text-secondary mb-6 uppercase">Pondasi Kepercayaan</h3>
               <p className="text-gray-600 leading-relaxed mb-6 text-lg border-l-2 border-primary pl-4">
-                PT. Louis Pandame Siregar adalah perusahaan kontraktor yang berdedikasi tinggi dalam menyediakan layanan konstruksi berkualitas prima. Dengan pengalaman dan tim profesional yang handal, kami terus berinovasi untuk memenuhi dan melampaui harapan klien.
+                PT. Ardumega Kontraktor adalah perusahaan kontraktor yang berdedikasi tinggi dalam menyediakan layanan konstruksi berkualitas prima. Dengan pengalaman dan tim profesional yang handal, kami terus berinovasi untuk memenuhi dan melampaui harapan klien.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg bg-gray-50 p-6 border border-gray-100">
                 Integritas, profesionalisme, dan komitmen terhadap keselamatan kerja adalah nilai-nilai inti yang kami pegang teguh dalam setiap proyek yang kami tangani, dari skala kecil hingga mega proyek.

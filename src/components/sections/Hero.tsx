@@ -33,7 +33,7 @@ export default function Hero() {
           <span className="text-primary">Struktur Kokoh</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed border-l-4 border-primary pl-4 text-left inline-block">
-          PT. Louis Pandame Siregar hadir sebagai mitra kontraktor profesional untuk mewujudkan proyek konstruksi impian Anda dengan standar tertinggi.
+          PT. Ardumega Kontraktor hadir sebagai mitra kontraktor profesional untuk mewujudkan proyek konstruksi impian Anda dengan standar tertinggi.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <Link

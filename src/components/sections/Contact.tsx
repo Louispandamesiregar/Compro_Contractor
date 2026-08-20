@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const waNumber = "6285779991402";
-  const waMessage = "Halo tim PT. Louis Pandame Siregar, saya ingin berdiskusi mengenai kebutuhan proyek konstruksi saya.";
+  const waMessage = "Halo tim PT. Ardumega Kontraktor, saya ingin berdiskusi mengenai kebutuhan proyek konstruksi saya.";
   const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
-  const emailUrl = "mailto:louispandame@gmail.com";
+  const emailUrl = "mailto:info@ardumegakontraktor.com";
 
   return (
     <section id="contact" className="relative bg-secondary py-32 overflow-hidden">
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-black text-secondary text-lg mb-1 uppercase tracking-wide">Email</h4>
-                    <p className="text-gray-600">louispandame@gmail.com</p>
+                    <p className="text-gray-600">info@ardumegakontraktor.com</p>
                   </div>
                 </div>
               </div>

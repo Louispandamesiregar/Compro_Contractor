@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 relative group">
             <Link href="/" className="text-secondary font-black text-2xl tracking-tighter uppercase relative z-10 bg-primary px-2">
-              LOUIS PANDAME<span className="text-white"> SIREGAR</span>
+              ARDUMEGA<span className="text-white"> KONTRAKTOR</span>
             </Link>
             <div className="absolute inset-0 bg-white transform translate-x-1 translate-y-1 z-0 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
           </div>

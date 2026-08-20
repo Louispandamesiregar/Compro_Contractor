@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white font-black text-2xl tracking-tighter uppercase mb-6 flex items-center">
-              LOUIS PANDAME<span className="text-primary ml-2">SIREGAR</span>
+              ARDUMEGA<span className="text-primary ml-2">KONTRAKTOR</span>
             </h3>
             <div className="w-12 h-1 bg-primary mb-6"></div>
             <p className="text-sm leading-relaxed mb-6 font-medium">
@@ -53,14 +53,14 @@ export default function Footer() {
                 <div className="bg-primary/10 p-2 mr-3">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <span className="text-sm font-bold">louispandame@gmail.com</span>
+                <span className="text-sm font-bold">info@ardumegakontraktor.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-bold uppercase tracking-widest">
-          <p>&copy; {new Date().getFullYear()} PT. Louis Pandame Siregar.</p>
+          <p>&copy; {new Date().getFullYear()} PT. Ardumega Kontraktor.</p>
           <p className="mt-2 md:mt-0 text-primary">Hak Cipta Dilindungi.</p>
         </div>
       </div>
